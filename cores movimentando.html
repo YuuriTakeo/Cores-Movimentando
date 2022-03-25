@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .square{
+            width: 64px;
+            height: 64px;
+            border: 1px solid rgb(17, 17, 17);
+            float: left;
+            position: absolute;
+        }
+        #s1{
+            background-color: aqua;
+            left: 100px;
+        }
+        #s2{
+            background-color: rgb(255, 0, 179);
+            right: 978px;
+        }
+    </style>
+</head>
+<body>
+    <div class="square" id="s1" > </div>
+    <div class="square"  id="s2" > </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+        
+            $('#s1').click(function(){
+            $(this).animate({
+                left: "135px"
+            }, 500 );
+            $('#s2').animate({
+                left: "200px"
+            }, 500 );
+            $(this).animate({
+                left: "100px"
+            }, 500 );
+                
+            });
+ 
+        });
+        
+        
+        
+        </script>
+</body>
+</html>
